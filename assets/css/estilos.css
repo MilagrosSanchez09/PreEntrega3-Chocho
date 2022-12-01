@@ -1,12 +1,112 @@
 /*General*/
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 
 body{
     text-align: center;
+}
+
+
+/*nav*/
+
+nav{
+    background: #050624;
+    display: flex;
+    padding: 3vh;
+    margin-bottom: 0;
+}
+
+header h1{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    letter-spacing: .3rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    border-right: 1px solid rgba(92, 89, 89, 0.41);
+}
+
+nav ul li:last-child{
+    border-right: none;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 1rem;
+    padding: .8rem 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav ul li a:hover{
+    background-color: rgba(254, 254, 255, 0.138);
+    transition: all .3s;
+    border-bottom: solid .2rem rgb(222, 222, 233);
+    color: white;
+}
+
+.drawer{
+    font-size: 1rem;
+    color: white;
+    float: left;
+    cursor: pointer;
+    display: none;
+    margin-left: 1rem;
+    border: solid 1.5px rgba(255, 255, 255, 0.083);
+    padding: .2rem;
+    border-radius: .1rem;
+}
+
+#ckbox{
+    display: none;
+}
+
+@media (max-width:1039px) {
+    nav{
+        justify-content: flex-start;
+    }
+    .drawer{
+        display: block;
+    }
+    nav h1{
+        margin-left: 1rem;
+    }
+    ul{
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background-color: rgb(8, 8, 43);
+        top: 10vh;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+    }
+
+    nav ul li{
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        border-bottom: solid .1rem rgba(201, 196, 196, 0.4);
+    }
+
+    #ckbox:checked ~ .menu-box{
+        left:0;
+    }
+
 }
 
 /*Title Hero, Img Hero*/
@@ -26,7 +126,7 @@ section {
     padding: 25%;
     height: 100vh !important;
     width: 100vw;
-    background: url(../imagenes/genshin-impact-tree-landscape-nbj4z2tt8nqybfwn-nbj4z2tt8nqybfwn.jpg) no-repeat center;
+    background: url(https://images.alphacoders.com/111/1112818.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -47,45 +147,162 @@ img{
 
 /*Footer*/
 
-footer{
-    margin: 0;
-    padding: 15px 0;
-    background-color: rgba(225, 212, 212, 0.84);
+
+.container-fluid-footer{
+    background-color: #050624;
+    background: linear-gradient(to right, #050624, #1d1949, #050624);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    color: white;
 }
 
-footer ul{
-    list-style: none;
+.row-copy a{
+    text-decoration: none;
 }
 
-.footer{
-    display: flex;
-    justify-content: space-around;
-    padding: 35px 15%;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: solid;
-    color: black;
-}
-
-footer p{
-    font-size: 12px;
-    padding: 15px 0;
-}
-
-footer ul li a{
-    padding: 15px 0;
-    color: black;
-    font-size: 12px;
-}
-
-.copy{
-    display: flex;
-    justify-content: center;
-    color: #999;
-}
-
+/*text-white p-3" style="font-family: 'Poppins', sans-serif; */
+   
 /*TERMINA EL FOOTER*/
 
+/* CARDS */
+
+.container-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px 20px;
+}
+
+.card-container{
+    display: flex;
+    width: 200vh;
+    height: auto;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 1px 1´x 4px 2px rgba(0, 0, 0, rgba(0, 0, 0, 0.123));
+}
+
+.card-personaje{
+    border-right: 1px solid #ddd;
+}
+
+.card-personaje a{
+    position: relative;
+    display: block;
+}
+
+.card-personaje .descripcion{
+    padding: 20px;
+    text-align: center;
+}
+
+.card-container h2{
+    color: #050624;
+}
+
+.card-container h4{
+    margin-bottom: 20px;
+}
+
+.card-container img{
+    margin: 0 30px;
+    transition: .2s;
+}
+
+.descripcion{
+    background: #fbfbfb;
+    position: relative;
+}
+
+.descripcion p{
+    margin: 20px 30px;
+}
+
+.card-arma{
+    border-right: 1px solid #ddd;
+}
+
+.card-arma a{
+    position: relative;
+    display: block;
+}
+
+.card-arma .descripcion{
+    padding: 20px;
+    text-align: center;
+}
+
+.card-material{
+    border-right: 1px solid #ddd;
+}
+
+.card-material a{
+    position: relative;
+    display: block;
+}
+
+.card-material .descripcion{
+    padding: 20px;
+    text-align: center;
+}
+
+
+@media (max-width:640px){
+    .card-container{
+        display: block;
+        width: 450px;
+    }
+
+    .card-personaje {
+        padding: 20px 20px 5px 20px;
+        border: none;
+    }
+
+
+    .card-personaje h2{
+        text-align: center;
+    }
+
+    .card-personaje h4{
+        margin: 0;
+        text-align: center;
+    }
+
+    .card-arma {
+        padding: 20px 20px 5px 20px;
+        border: none;
+    }
+
+    .card-arma h2{
+        text-align: center;
+    }
+
+    .card-arma h4{
+        margin: 0;
+        text-align: center;
+    }
+
+    .card-material {
+        padding: 20px 20px 5px 20px;
+        border: none;
+    }
+    
+    .card-material h2{
+        text-align: center;
+    }
+
+    .card-material h4{
+        margin: 0;
+        text-align: center;
+    }
+
+    .descripcion{
+        padding: 5px 20px 20px 20px;
+    }
+
+}
 
 /*EVENTO*/
 
@@ -196,52 +413,6 @@ footer ul li a{
 
 
 /*Termina la galería*/
-
-/*Empiezan las cards*/
-
-.cardsPersonajes{
-    align-items: center;
-    padding-top: 8%;
-    text-align: center;
-}
-
-.cardPersonaje img{
-    width: 350px;
-}
-
-.cardPersonaje p{
-    padding-bottom: 50px;
-}
-
-.cardsMateriales{
-    align-items: center;
-    padding-top: 8%;
-    text-align: center;
-}
-
-.cardMateriales img{
-    width: 350px;
-}
-
-.cardMateriales p{
-    padding-bottom: 50px;
-}
-
-.cardsArmas{
-    align-items: center;
-    padding-top: 8%;
-    text-align: center;
-}
-
-.cardArmas img{
-    width: 350px;
-}
-
-.cardArmas p{
-    padding-bottom: 50px;
-}
-
-/*Terminan las cards*
 
 /*Empieza el Formulario*/
 
