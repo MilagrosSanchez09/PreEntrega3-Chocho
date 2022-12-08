@@ -1,0 +1,28 @@
+/*-------Variables-------*/
+
+/*---Paleta de colores---*/
+$color-principal: #050624;
+$color-titulos: white;
+
+/*Map*/
+$btn: (
+    fondo-boton: #050624,
+    bordes-boton: white,
+    color-texto: white,
+);
+
+/*Extend*/
+%flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Mixin*/
+
+@mixin  flex ($flex, $justify-content, $align-items) {
+    display: $flex;
+    justify-content: $justify-content;
+    align-items: $align-items;    
+}
+

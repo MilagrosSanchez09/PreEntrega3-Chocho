@@ -1,0 +1,208 @@
+/*------NAV-----*/
+
+
+@media (max-width:1039px) {
+    body header nav {
+        justify-content: flex-start;
+
+        a img {
+            margin-left: 1rem;
+        }
+
+        ul {
+            position: fixed;
+            width: 50%;
+            height: 100vh;
+            background-color: rgb(8, 8, 43);
+            top: 10vh;
+            left: -100%;
+            text-align: left;
+            transition: all .5s;
+            display: flex;
+            flex-direction: column;
+            align-content: stretch;
+
+            li {
+                padding: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                padding-left: 2rem;
+                border-bottom: solid .1rem rgba(201, 196, 196, 0.4);
+            }
+        }
+    }
+}
+
+/*MENU*/
+
+@media (max-width:1039px) {
+    body {
+        header {
+            nav {
+                .drawer {
+                    display: block;
+                }
+
+                #ckbox:checked~.menu-box {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+/*------CARDS------*/
+
+
+@media (max-width:640px) {
+    section .container-card .card-container {
+        display: block;
+        width: 450px;
+
+        .card-personaje {
+            padding: 20px 20px 5px 20px;
+            border: none;
+
+            h2 {
+                text-align: center;
+            }
+
+            h4 {
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        .card-arma {
+            padding: 20px 20px 5px 20px;
+            border: none;
+
+            h2 {
+                text-align: center;
+            }
+
+            h4 {
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        .card-material {
+            padding: 20px 20px 5px 20px;
+            border: none;
+
+            h2 {
+                text-align: center;
+            }
+
+            h4 {
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        .historia {
+            padding: 5px 20px 20px 20px;
+        }
+    }
+
+
+}
+
+/*------GALERIA------*/
+
+@media (min-width:518px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+
+        .gallery-item:nth-child(1) {
+            grid-column-start: span 2;
+        }
+
+        .gallery-item:nth-child(2) {
+            grid-column-start: span 3;
+        }
+
+        .gallery-item:nth-child(3) {
+            grid-column-start: span 2;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column-start: span 3;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-column-start: span 2;
+            grid-row-start: span 2;
+        }
+
+        .gallery-item:nth-child(6) {
+            grid-column-start: span 3;
+            grid-row-start: span 1;
+        }
+
+        .gallery-item:nth-child(7) {
+            grid-column-start: span 3;
+            grid-row-start: span 1;
+        }
+
+        .gallery-item:nth-child(8) {
+            grid-column-start: span 2;
+        }
+
+        .gallery-item:nth-child(9) {
+            grid-column-start: span 3;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .gallery-container {
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+        margin: auto;
+
+        .gallery-item:nth-child(2) {
+            grid-column-start: span 3;
+        }
+
+        .gallery-item:nth-child(3) {
+            grid-column-start: span 3;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column-start: span 2;
+            grid-row-start: span 2;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column-start: span 2;
+            grid-row-start: span 2;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-column-start: span 3;
+            grid-row-start: span 2;
+        }
+
+        .gallery-item:nth-child(6) {
+            grid-column-start: span 2;
+            grid-row-start: span 1;
+        }
+
+        .gallery-item:nth-child(7) {
+            grid-column-start: span 3;
+            grid-row-start: span 1;
+        }
+
+        .gallery-item:nth-child(8) {
+            grid-column-start: span 3;
+            grid-row-start: span 1;
+        }
+
+        .gallery-item:nth-child(9) {
+            grid-column-start: span 2;
+            grid-row-start: span 1;
+        }
+    }
+}

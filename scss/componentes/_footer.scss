@@ -1,0 +1,17 @@
+@import "../base/variables";
+
+/*ESTILOS DEL FOOTER*/
+
+footer {
+    .container-fluid-footer {
+        background-color: $color-principal;
+        background: linear-gradient(to right, #050624, #1d1949, #050624);
+        font-family: 'Times New Roman', Times, serif;
+        padding: 15px;
+        color: $color-titulos;
+
+        .row-copy a{
+            text-decoration: none;
+        }
+    }
+}

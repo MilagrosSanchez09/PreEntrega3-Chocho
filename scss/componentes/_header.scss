@@ -1,0 +1,62 @@
+@import "../base/variables";
+
+/*ESTILOS DEL HEADER*/
+
+
+header {
+    nav {
+        background: $color-principal;
+        display: flex;
+        padding: 3vh;
+        margin-bottom: 0;
+        #ckbox{
+            display: none;
+        }
+        .drawer{
+            font-size: 1rem;
+            color: white;
+            float: left;
+            cursor: pointer;
+            display: none;
+            margin-left: 1rem;
+            border: solid 1.5px rgba(255, 255, 255, 0.083);
+            padding: .2rem;
+            border-radius: .1rem;
+        }
+        a {
+            img {
+                width: 250px;
+                height: 100px;
+                padding-left: 3%;
+            }
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                border-right: 1px solid rgba(92, 89, 89, 0.41);
+                @include flex (flex, end, center);
+                
+                &:last-child{
+                    border-right: none;
+                }
+                a {
+                    color: $color-titulos;
+                    font-size: 1rem;
+                    padding: .8rem 1rem;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-family: 'Times New Roman', Times, serif;
+
+                    &:hover {
+                        background-color: rgba(254, 254, 255, 0.138);
+                        transition: all .3s;
+                        border-bottom: solid .2rem rgb(222, 222, 233);
+                        color: $color-titulos;
+                    }
+                }
+            }
+        }
+    }
+}
