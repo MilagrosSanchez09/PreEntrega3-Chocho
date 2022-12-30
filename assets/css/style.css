@@ -14,7 +14,7 @@ body {
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
+section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven, .main-content .concept-seven .word {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -28,7 +28,7 @@ section .container-card, .eventos, .main-content .concept-four, .main-content .c
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
+section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven, .main-content .concept-seven .word {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -86,7 +86,7 @@ header nav {
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
+section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven, .main-content .concept-seven .word {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -207,7 +207,7 @@ section {
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
+section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven, .main-content .concept-seven .word {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -370,7 +370,7 @@ footer .container-fluid-footer {
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
+section .container-card, .eventos, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven, .main-content .concept-seven .word {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -502,7 +502,8 @@ form {
     grid: repeat(3, 1fr)/repeat(3, 1fr);
     background: #050624;
     padding: 8em;
-    background: url(https://wallake.org/uploads/posts/2022-09/1663630561_1780-1.webp) no-repeat center center/cover; }
+    background: url(https://wallake.org/uploads/posts/2022-09/1663630561_1780-1.webp) no-repeat center center/cover;
+    background-size: cover; }
     .main-content .concept-one .hover {
       z-index: 1;
       cursor: pointer; }
@@ -538,13 +539,14 @@ form {
       z-index: 0;
       letter-spacing: 25px;
       cursor: pointer;
-      font: 900 60px Montserrat;
+      font: 900 45px Montserrat;
       text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
   .main-content .concept-two {
     display: grid;
     grid: 100%/repeat(7, 1fr);
-    padding: 5em 15em;
-    background: url("../../assets/imagenes/inazuma.jpg") center center/cover; }
+    padding: 5em 0em;
+    background: url("../../assets/imagenes/inazuma.jpg") center center/cover;
+    background-size: cover; }
     .main-content .concept-two .hover {
       place-items: center;
       cursor: pointer; }
@@ -563,7 +565,8 @@ form {
         text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
   .main-content .concept-three {
     padding: 5em;
-    background: url(https://images7.alphacoders.com/120/1200618.jpg) center center/cover; }
+    background: url(https://images7.alphacoders.com/120/1200618.jpg) center center/cover;
+    background-size: cover; }
     .main-content .concept-three .word {
       display: flex;
       align-items: center;
@@ -598,15 +601,16 @@ form {
   .main-content .concept-four {
     height: 100vh;
     position: relative;
-    letter-spacing: 2em;
-    background: url("../../assets/imagenes/mondstadt.jpg") no-repeat center center/cover; }
+    letter-spacing: 1em;
+    background: url("../../assets/imagenes/mondstadt.jpg") no-repeat center center/cover;
+    background-size: cover; }
     .main-content .concept-four h1 {
       display: inline-block;
       color: white;
-      font: 900 60px Montserrat;
+      font: 900 40px Montserrat;
       text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
     .main-content .concept-four:hover h1 {
-      letter-spacing: 25px;
+      letter-spacing: 5px;
       cursor: pointer;
       transform: scale(1.3);
       transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
@@ -630,28 +634,28 @@ form {
         top: 0;
         transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
   .main-content .concept-seven {
-    background: url("../../assets/imagenes/Palace_in_Snezhnaya.webp") top center/cover; }
-    .main-content .concept-seven h1 {
-      letter-spacing: 35px;
-      color: white;
-      position: relative;
-      cursor: pointer;
-      font: 900 60px Montserrat;
-      text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
-      .main-content .concept-seven h1:before {
-        content: "Snezhnaya";
+    background: url("../../assets/imagenes/Palace_in_Snezhnaya.webp") center center/cover; }
+    .main-content .concept-seven .word {
+      width: 450px;
+      height: 80%;
+      color: white; }
+      .main-content .concept-seven .word:hover .char:before {
+        transition: 0.6s ease;
+        color: rgba(255, 255, 255, 0.8);
+        animation: falls 1s ease forwards; }
+      .main-content .concept-seven .word:hover .char:nth-child(1):before {
+        animation: falls 0.9s ease 0.2s forwards; }
+      .main-content .concept-seven .word:hover .char:nth-child(2n + 3):before {
+        animation: falls 1s ease 0.3s forwards; }
+    .main-content .concept-seven .char {
+      flex: 1;
+      position: relative; }
+      .main-content .concept-seven .char:before {
+        content: attr(data-content);
         position: absolute;
-        margin: auto;
-        left: 0;
-        right: 0;
-        max-width: 400px;
+        top: 0;
         color: transparent;
-        letter-spacing: 10px;
         text-shadow: none; }
-    .main-content .concept-seven:hover h1:before {
-      transition: 0.6s ease;
-      color: rgba(255, 255, 255, 0.8);
-      animation: jump-out 0.6s ease forwards; }
 
 @keyframes jump-out {
   0% {
