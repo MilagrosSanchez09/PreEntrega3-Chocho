@@ -18,7 +18,8 @@ section .container-card {
             border-right: 1px solid #ddd;
             a {
                 position: relative;
-                display: block;
+                display: flex;
+                justify-content: center;
                 img {
                     margin: 0 30px;
                     transition: .2s;
@@ -41,7 +42,6 @@ section .container-card {
             text-align: center;
             background: white;
             position: relative;
-
             p {
                 margin: 20px 30px;
             }
@@ -50,7 +50,8 @@ section .container-card {
             border-right: 1px solid #ddd;
             a {
                 position: relative;
-                display: block;
+                display: flex;
+                justify-content: center;
                 img {
                     margin: 0 30px;
                     transition: .2s;
@@ -81,8 +82,8 @@ section .container-card {
             border-right: 1px solid #ddd;
             a {
                 position: relative;
-                display: block;
-
+                display: flex;
+                justify-content: center;
                 img {
                     margin: 0 30px;
                     transition: .2s;
