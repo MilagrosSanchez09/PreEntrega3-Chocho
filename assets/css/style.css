@@ -609,7 +609,7 @@ form {
     .main-content .concept-four h1 {
       display: inline-block;
       color: white;
-      font: 900 40px Montserrat;
+      font: 900 35px Montserrat;
       text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
     .main-content .concept-four:hover h1 {
       letter-spacing: 5px;
