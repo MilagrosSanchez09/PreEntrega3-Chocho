@@ -18,6 +18,11 @@ $btn: (
     align-items: center;
 }
 
+%grid{
+    display: grid;
+    position: relative;
+}
+
 /*Mixin*/
 
 @mixin  flex ($flex, $justify-content, $align-items) {

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*ESTILOS GENERALES*/
 * {
   padding: 0;
   margin: 0;
@@ -12,22 +14,31 @@ body {
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card {
+section .container-card, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.main-content .concept-two .hover, .main-content .concept-three .word .hover {
+  display: grid;
+  position: relative; }
 
 /*Mixin*/
 /*-------Variables-------*/
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card {
+section .container-card, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
   display: flex;
   justify-content: center;
   align-items: center; }
 
+.main-content .concept-two .hover, .main-content .concept-three .word .hover {
+  display: grid;
+  position: relative; }
+
 /*Mixin*/
+/*ESTILOS DEL HEADER*/
 header nav {
   background: #050624;
   display: flex;
@@ -75,12 +86,17 @@ header nav {
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card {
+section .container-card, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
   display: flex;
   justify-content: center;
   align-items: center; }
 
+.main-content .concept-two .hover, .main-content .concept-three .word .hover {
+  display: grid;
+  position: relative; }
+
 /*Mixin*/
+/*ESTILOS DE LAS CARDS*/
 section .container-card {
   height: 5%;
   font-family: 'Times New Roman', Times, serif;
@@ -165,7 +181,7 @@ section .container-card {
       section .container-card .card-container .historia p {
         margin: 20px 30px; }
 
-/*Title Hero, Img Hero*/
+/*ESTILOS DE CARD EN INDEX*/
 section {
   padding: 15px 0; }
   section .container-hero {
@@ -188,12 +204,17 @@ section {
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card {
+section .container-card, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
   display: flex;
   justify-content: center;
   align-items: center; }
 
+.main-content .concept-two .hover, .main-content .concept-three .word .hover {
+  display: grid;
+  position: relative; }
+
 /*Mixin*/
+/*ESTILOS DEL FOOTER*/
 footer .container-fluid-footer {
   background-color: #050624;
   background: linear-gradient(to right, #050624, #1d1949, #050624);
@@ -210,17 +231,18 @@ footer .container-fluid-footer {
     body header nav a img {
       margin-left: 1rem; }
     body header nav ul {
-      position: fixed;
-      width: 50%;
-      height: 100vh;
+      position: absolute;
+      width: 100%;
+      height: 52.5vh;
       background-color: #08082b;
-      top: 10vh;
+      top: 16vh;
       left: -100%;
       text-align: left;
       transition: all .5s;
       display: flex;
       flex-direction: column;
-      align-content: stretch; }
+      align-content: stretch;
+      z-index: 1; }
       body header nav ul li {
         padding: 1rem 0;
         display: flex;
@@ -228,6 +250,7 @@ footer .container-fluid-footer {
         padding-left: 2rem;
         border-bottom: solid 0.1rem rgba(201, 196, 196, 0.4); } }
 
+/*MENU*/
 @media (max-width: 1039px) {
   body header nav .drawer {
     display: block; }
@@ -235,7 +258,7 @@ footer .container-fluid-footer {
     left: 0; } }
 
 /*------CARDS------*/
-@media (max-width: 640px) {
+@media (max-width: 1039px) {
   section .container-card .card-container {
     display: block;
     width: 450px; }
@@ -267,9 +290,9 @@ footer .container-fluid-footer {
       padding: 5px 20px 20px 20px; } }
 
 /*------GALERIA------*/
-@media (min-width: 518px) {
+@media only screen and (min-width: 360px) and (max-width: 1024px) {
   .gallery-container {
-    grid-template-columns: repeat(3, 1fr); }
+    grid-template-columns: repeat(5, 1fr); }
     .gallery-container .gallery-item:nth-child(1) {
       grid-column-start: span 2; }
     .gallery-container .gallery-item:nth-child(2) {
@@ -292,47 +315,46 @@ footer .container-fluid-footer {
     .gallery-container .gallery-item:nth-child(9) {
       grid-column-start: span 3; } }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1025px) and (max-width: 2400px) {
   .gallery-container {
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
-    margin: auto; }
+    grid-template-columns: repeat(5, 1fr); }
+    .gallery-container .gallery-item:nth-child(1) {
+      grid-column-start: span 2;
+      grid-row-start: span 2; }
     .gallery-container .gallery-item:nth-child(2) {
       grid-column-start: span 3; }
     .gallery-container .gallery-item:nth-child(3) {
       grid-column-start: span 3; }
-    .gallery-container .gallery-item:nth-child(1) {
-      grid-column-start: span 2;
-      grid-row-start: span 2; }
     .gallery-container .gallery-item:nth-child(4) {
-      grid-column-start: span 2;
-      grid-row-start: span 2; }
+      grid-column-start: span 2; }
     .gallery-container .gallery-item:nth-child(5) {
       grid-column-start: span 3;
       grid-row-start: span 2; }
     .gallery-container .gallery-item:nth-child(6) {
-      grid-column-start: span 2;
-      grid-row-start: span 1; }
+      grid-column-start: span 2; }
     .gallery-container .gallery-item:nth-child(7) {
-      grid-column-start: span 3;
+      grid-column-start: span 5;
       grid-row-start: span 1; }
     .gallery-container .gallery-item:nth-child(8) {
-      grid-column-start: span 3;
-      grid-row-start: span 1; }
+      grid-column-start: span 2; }
     .gallery-container .gallery-item:nth-child(9) {
-      grid-column-start: span 2;
-      grid-row-start: span 1; } }
+      grid-column-start: span 3; } }
 
 /*-------Variables-------*/
 /*---Paleta de colores---*/
 /*Map*/
 /*Extend*/
-section .container-card {
+section .container-card, .main-content .concept-four, .main-content .concept-five .word, .main-content .concept-seven {
   display: flex;
   justify-content: center;
   align-items: center; }
 
+.main-content .concept-two .hover, .main-content .concept-three .word .hover {
+  display: grid;
+  position: relative; }
+
 /*Mixin*/
+/*ESTILOS DE PÁGINA DE CONTACTO*/
 form {
   background-color: white;
   border-radius: 3px;
@@ -372,6 +394,7 @@ form {
       form .center-content .btn-black :active {
         background-color: #150f6c; }
 
+/*ESTILOS DE PÁGINA DE EVENTOS*/
 .eventos {
   align-items: center;
   padding: 20px 15%;
@@ -388,6 +411,7 @@ form {
   text-decoration: solid;
   padding-top: 25px; }
 
+/*ESTILOS DE PÁGINA DE GALERÍA*/
 .gallery-gallery {
   padding-top: 5%;
   font-family: 'Times New Roman', Times, serif; }
@@ -420,3 +444,205 @@ form {
       margin: 0;
       padding: 10px;
       text-transform: unset; }
+
+/*ESTILOS PÁGINA DE REGIONES*/
+.main-content {
+  text-align: center;
+  text-transform: uppercase;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll; }
+  .main-content .concept {
+    position: relative;
+    padding: 5em;
+    height: 100vh;
+    overflow: hidden;
+    scroll-snap-align: center; }
+    .main-content .concept:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: radial-gradient(rgba(0, 0, 0, 0.3), transparent);
+      opacity: 0;
+      transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
+      .main-content .concept:before .concept:hover:before {
+        opacity: 0.5; }
+  .main-content .concept-one {
+    display: grid;
+    grid: repeat(3, 1fr)/repeat(3, 1fr);
+    background: #050624;
+    padding: 8em;
+    background: url(https://wallake.org/uploads/posts/2022-09/1663630561_1780-1.webp) no-repeat center center/cover; }
+    .main-content .concept-one .hover {
+      z-index: 1;
+      cursor: pointer; }
+    .main-content .concept-one .hover-1:hover ~ h1 {
+      left: 30px;
+      margin-top: -10px; }
+    .main-content .concept-one .hover-2:hover ~ h1 {
+      margin-top: -10px; }
+    .main-content .concept-one .hover-3:hover ~ h1 {
+      right: 30px;
+      margin-top: -10px; }
+    .main-content .concept-one .hover-4:hover ~ h1 {
+      left: 30px; }
+    .main-content .concept-one .hover-6:hover ~ h1 {
+      right: 30px; }
+    .main-content .concept-one .hover-7:hover ~ h1 {
+      left: 30px;
+      margin-top: -50px; }
+    .main-content .concept-one .hover-8:hover ~ h1 {
+      margin-top: -50px; }
+    .main-content .concept-one .hover-9:hover ~ h1 {
+      right: 30px;
+      margin-top: -50px; }
+    .main-content .concept-one h1 {
+      position: absolute;
+      color: white;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 50%;
+      margin-top: -30px;
+      transition: 0.5s ease;
+      z-index: 0;
+      letter-spacing: 25px;
+      cursor: pointer;
+      font: 900 60px Montserrat;
+      text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
+  .main-content .concept-two {
+    display: grid;
+    grid: 100%/repeat(7, 1fr);
+    padding: 5em 15em;
+    background: url("../../assets/imagenes/inazuma.jpg") center center/cover; }
+    .main-content .concept-two .hover {
+      place-items: center;
+      cursor: pointer; }
+      .main-content .concept-two .hover h1 {
+        color: transparent;
+        text-align: 0 1px 1px;
+        -webkit-text-stroke: 2px #fff;
+        text-shadow: none;
+        transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font: 900 60px Montserrat;
+        text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
+      .main-content .concept-two .hover:hover h1 {
+        transform: scale(1.5);
+        color: #fff;
+        -webkit-text-stroke: 2px transparent;
+        text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .main-content .concept-three {
+    padding: 5em;
+    background: url(https://images7.alphacoders.com/120/1200618.jpg) center center/cover; }
+    .main-content .concept-three .word {
+      display: flex;
+      align-items: center;
+      max-width: 500px;
+      margin: auto;
+      cursor: pointer; }
+      .main-content .concept-three .word .hover {
+        flex: 1;
+        height: calc(100vh - 10em);
+        grid: repeat(2, 2fr)/100%;
+        cursor: pointer; }
+        .main-content .concept-three .word .hover div {
+          position: relative;
+          z-index: 5; }
+          .main-content .concept-three .word .hover div:nth-child(1):hover ~ h1 {
+            margin-top: -10px; }
+          .main-content .concept-three .word .hover div:nth-child(2):hover ~ h1 {
+            margin-top: -50px; }
+        .main-content .concept-three .word .hover h1 {
+          position: absolute;
+          color: white;
+          margin: auto;
+          left: 0;
+          right: 0;
+          top: 50%;
+          margin-top: -30px;
+          transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+          z-index: 0;
+          cursor: pointer;
+          font: 900 60px Montserrat;
+          text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
+  .main-content .concept-four {
+    height: 100vh;
+    position: relative;
+    letter-spacing: 2em;
+    background: url("../../assets/imagenes/mondstadt.jpg") no-repeat center center/cover; }
+    .main-content .concept-four h1 {
+      display: inline-block;
+      color: white;
+      font: 900 60px Montserrat;
+      text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
+    .main-content .concept-four:hover h1 {
+      letter-spacing: 25px;
+      cursor: pointer;
+      transform: scale(1.3);
+      transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  .main-content .concept-five {
+    background: url(https://images6.alphacoders.com/127/1275600.jpg) center center/cover;
+    display: flex;
+    align-items: center; }
+    .main-content .concept-five .word {
+      width: 600px;
+      margin: auto;
+      height: 80%;
+      cursor: pointer; }
+      .main-content .concept-five .word:hover .char:nth-child(even) {
+        top: 20px; }
+      .main-content .concept-five .word:hover .char:nth-child(odd) {
+        top: -20px; }
+      .main-content .concept-five .word .char {
+        flex: 1;
+        position: relative;
+        display: inline-block;
+        top: 0;
+        transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+  .main-content .concept-seven {
+    background: url("../../assets/imagenes/snezhnaya.jpg") top center/cover; }
+    .main-content .concept-seven h1 {
+      letter-spacing: 35px;
+      color: white;
+      position: relative;
+      cursor: pointer;
+      font: 900 60px Montserrat;
+      text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
+      .main-content .concept-seven h1:before {
+        content: "Snezhnaya";
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        max-width: 400px;
+        color: transparent;
+        letter-spacing: 10px;
+        text-shadow: none; }
+    .main-content .concept-seven:hover h1:before {
+      transition: 0.6s ease;
+      color: rgba(255, 255, 255, 0.8);
+      animation: jump-out 0.6s ease forwards; }
+
+@keyframes jump-out {
+  0% {
+    opacity: 0;
+    transform: scale(1); }
+  20% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: scale(2); } }
+
+@keyframes falls {
+  0% {
+    opacity: 0;
+    top: 0; }
+  20% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    top: 100px; } }

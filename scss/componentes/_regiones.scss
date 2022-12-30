@@ -1,0 +1,252 @@
+/*ESTILOS PÁGINA DE REGIONES*/
+
+.main-content {
+    text-align: center;
+    text-transform: uppercase;
+    scroll-snap-type: y mandatory;
+    position: relative;
+    height: 100vh;
+    overflow-y: scroll;
+    .concept {
+        position: relative;
+        padding: 5em;
+        height: 100vh;
+        overflow: hidden;
+        scroll-snap-align: center;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(rgba(0, 0, 0, 0.3), transparent);
+            opacity: 0;
+            transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+            .concept:hover:before {
+                opacity: 0.5;
+            }
+        }
+    }
+    .concept-one {
+        display: grid;
+        grid: repeat(3, 1fr)/repeat(3, 1fr);
+        background: $color-principal;
+        padding: 8em;
+        background: url(https://wallake.org/uploads/posts/2022-09/1663630561_1780-1.webp) no-repeat center center/cover;
+        .hover {
+            z-index: 1;
+            cursor: pointer;
+        }
+        .hover-1:hover~h1 {
+            left: 30px;
+            margin-top: -10px;
+        }
+        .hover-2:hover~h1 {
+            margin-top: -10px;
+        }
+        .hover-3:hover~h1 {
+            right: 30px;
+            margin-top: -10px;
+        }
+        .hover-4:hover~h1 {
+            left: 30px;
+        }
+        .hover-6:hover~h1 {
+            right: 30px;
+        }
+        .hover-7:hover~h1 {
+            left: 30px;
+            margin-top: -50px;
+        }
+        .hover-8:hover~h1 {
+            margin-top: -50px;
+        }
+        .hover-9:hover~h1 {
+            right: 30px;
+            margin-top: -50px;
+        }
+        h1 {
+            position: absolute;
+            color: $color-titulos;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin-top: -30px;
+            transition: 0.5s ease;
+            z-index: 0;
+            letter-spacing: 25px;
+            cursor: pointer;
+            font: 900 60px Montserrat;
+            text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+    }
+    .concept-two {
+        display: grid;
+        grid: 100%/repeat(7, 1fr);
+        padding: 5em 15em;
+        background: url("../../assets/imagenes/inazuma.jpg") center center/cover;
+        .hover {
+            @extend %grid;
+            place-items: center;
+            cursor: pointer;
+            h1 {
+                color: transparent;
+                text-align: 0 1px 1px;
+                -webkit-text-stroke: 2px #fff;
+                text-shadow: none;
+                transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                font: 900 60px Montserrat;
+                text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            }
+            &:hover h1 {
+                transform: scale(1.5);
+                color: #fff;
+                -webkit-text-stroke: 2px transparent;
+                text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    .concept-three {
+        padding: 5em;
+        background: url(https://images7.alphacoders.com/120/1200618.jpg) center center/cover;
+        .word {
+            display: flex;
+            align-items: center;
+            max-width: 500px;
+            margin: auto;
+            cursor: pointer;
+            .hover {
+                flex: 1;
+                @extend %grid;
+                height: calc(100vh - 10em);
+                grid: repeat(2, 2fr)/100%;
+                cursor: pointer;
+                div {
+                    position: relative;
+                    z-index: 5;
+                    &:nth-child(1):hover~h1 {
+                        margin-top: -10px;
+                    }
+                    &:nth-child(2):hover~h1 {
+                        margin-top: -50px;
+                    }
+                }
+                h1 {
+                    position: absolute;
+                    color: $color-titulos;
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -30px;
+                    transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+                    z-index: 0;
+                    cursor: pointer;
+                    font: 900 60px Montserrat;
+                    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+    .concept-four {
+        height: 100vh;
+        position: relative;
+        @extend %flex;
+        letter-spacing: 2em;
+        background: url("../../assets/imagenes/mondstadt.jpg") no-repeat center center/cover;
+        h1 {
+            display: inline-block;
+            color: $color-titulos;
+            font: 900 60px Montserrat;
+            text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        &:hover h1 {
+            letter-spacing: 25px;
+            cursor: pointer;
+            transform: scale(1.3);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    }
+    .concept-five {
+        background: url(https://images6.alphacoders.com/127/1275600.jpg) center center/cover;
+        display: flex;
+        align-items: center;
+        .word {
+            width: 600px;
+            margin: auto;
+            @extend %flex;
+            height: 80%;
+            cursor: pointer;
+            &:hover .char:nth-child(even) {
+                top: 20px;
+            }
+            &:hover .char:nth-child(odd) {
+                top: -20px;
+            }
+            .char {
+                flex: 1;
+                position: relative;
+                display: inline-block;
+                top: 0;
+                transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+        }
+    }
+    .concept-seven {
+        background: url("../../assets/imagenes/snezhnaya.jpg") top center/cover;
+        @extend %flex;
+        h1 {
+            letter-spacing: 35px;
+            color: $color-titulos;
+            position: relative;
+            cursor: pointer;
+            font: 900 60px Montserrat;
+            text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            &:before {
+                content: "Snezhnaya";
+                position: absolute;
+                margin: auto;
+                left: 0;
+                right: 0;
+                max-width: 400px;
+                color: transparent;
+                letter-spacing: 10px;
+                text-shadow: none;
+            }
+        }
+        &:hover h1:before {
+            transition: 0.6s ease;
+            color: rgba(255, 255, 255, 0.8);
+            animation: jump-out 0.6s ease forwards;
+        }
+    }
+}
+@keyframes jump-out {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@keyframes falls {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 100px;
+    }
+}

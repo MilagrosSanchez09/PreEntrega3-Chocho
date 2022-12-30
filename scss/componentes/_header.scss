@@ -2,7 +2,6 @@
 
 /*ESTILOS DEL HEADER*/
 
-
 header {
     nav {
         background: $color-principal;
@@ -30,10 +29,8 @@ header {
                 padding-left: 3%;
             }
         }
-
         ul {
             display: flex;
-
             li {
                 border-right: 1px solid rgba(92, 89, 89, 0.41);
                 @include flex (flex, end, center);
@@ -48,7 +45,6 @@ header {
                     text-transform: uppercase;
                     text-decoration: none;
                     font-family: 'Times New Roman', Times, serif;
-
                     &:hover {
                         background-color: rgba(254, 254, 255, 0.138);
                         transition: all .3s;
